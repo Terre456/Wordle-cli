@@ -4,4 +4,4 @@ if [[ ! -f "$HOME/.profile" ]]; then touch $HOME/.profile; chmod +x $HOME/.profi
 echo "alias wordle=\"bash $HOME/Wordle/main.sh\"" >> $HOME/.profile
 
 mkdir $HOME/Wordle
-cp $PWD/* $HOME/Wordle
+cp -r $PWD/* $HOME/Wordle
