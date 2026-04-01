@@ -1,0 +1,2 @@
+#!/bin/bash
+javac -d bin -cp .:lib/JColor-5.5.1.jar src/$1.java
