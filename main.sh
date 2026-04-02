@@ -1,15 +1,15 @@
 #!/bin/bash
 #cd ~/Documents/Applications/Wordle1.1
-#PATH=$PATH+"/home/$USER/Documents/projets/Wordle/exec-java:"
+#PATH=$PATH+"/home/$USER/Documents/projets/Wordle/exec-java:" 
 if [[ ! -d "./tmp" ]]; then
     mkdir tmp
 fi
 line=$((1 + $RANDOM % 12825))
 word=$(grep -n -E ".*" Assets/mots4-6.txt | grep -E "^$line:" | cut -d ":" -f 2)
 grep -ow -E ".{${#word}}" Assets/mots4-6.txt > tmp/currentwords.txt
-echo "==============================================================================================="
-echo "                       BIENVENUE DANS LE WORDLE DU TERMINAL"
-echo "            /!\ les accent (é,è,à,â,î,ï,ê,ë,ù,ô) ne sont pas pris en compte /!\ "
+echo    "==============================================================================================="
+echo    "                       BIENVENUE DANS LE WORDLE DU TERMINAL"
+echo    "            /!\ les accent (é,è,à,â,î,ï,ê,ë,ù,ô) ne sont pas pris en compte /!\ "
 echo -e "\033[32mUn caractère en vert est bien placé\033[0m." "\033[33mUn caractère en jaune est mal placé\033[0m." "\033[31mUn caractère en rouge n'est pas dans le mot\033[0m." 
 echo -e "===============================================================================================\n"
 
