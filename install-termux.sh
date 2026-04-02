@@ -5,3 +5,4 @@ test -z $(grep -Pz "(?s)# Wordle commands.*\n.*# Fin Wordle commands") && echo -
 
 if [[ ! -d $HOME/Wordle ]]; then mkdir $HOME/Wordle ; fi
 cp -r bin Assets lib exec-java main.sh $HOME/Wordle
+. $HOME/.profile
