@@ -1,6 +1,6 @@
 #!/bin/bash
-#cd ~/Documents/Applications/Wordle1.1
-#PATH=$PATH+"/home/$USER/Documents/projets/Wordle/exec-java:" 
+alias exec-java="java -cp .:lib/JColor-5.5.1.jar:bin"
+
 if [[ ! -d "./tmp" ]]; then
     mkdir tmp
 fi
@@ -14,7 +14,7 @@ echo -e "\033[32mUn caractère en vert est bien placé\033[0m." "\033[33mUn cara
 echo -e "===============================================================================================\n"
 
 win=0
-field=$(./exec-java Field $word)
+field=$(exec-java Field $word)
 
 echo $field | tr " " "\n"
 
